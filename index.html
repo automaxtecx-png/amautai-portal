@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AmautAI — Aplicaciones para maestros y técnicos</title>
+  <meta name="description" content="Portal de aplicaciones pedagógicas y técnicas desarrolladas por Jonny Otero, instructor SENATI en instrumentación industrial, electrónica y mecatrónica." />
+  <meta name="author" content="Jonny Otero" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AmautAI — Apps para maestros y técnicos" />
+  <meta property="og:description" content="Planificación de sesiones, simuladores y herramientas para la enseñanza técnica." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amautai.com" />
+  <meta property="og:image" content="https://amautai.com/assets/logo-amautai.png" />
+
+  <link rel="icon" href="/assets/logo-amautai.png" type="image/png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind via CDN (production-ready, no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              50:  '#f5f3ff',
+              100: '#ede9fe',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- ───────────── HEADER ───────────── -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-3">
+        <img src="/assets/logo-amautai.png" alt="AmautAI" class="h-9 w-9" />
+        <span class="font-bold text-xl text-slate-900">AmautAI</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <li><a href="#apps" class="hover:text-brand-600 transition">Aplicaciones</a></li>
+        <li><a href="#sobre-mi" class="hover:text-brand-600 transition">Sobre mí</a></li>
+        <li><a href="#donaciones" class="hover:text-brand-600 transition">Apoyar</a></li>
+        <li><a href="#contacto" class="hover:text-brand-600 transition">Contacto</a></li>
+      </ul>
+      <a href="https://app.amautai.com" class="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-brand-600 text-white rounded-lg text-sm font-semibold hover:bg-brand-700 transition shadow-sm">
+        Ir a la app
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ───────────── HERO ───────────── -->
+  <section id="inicio" class="max-w-6xl mx-auto px-6 pt-20 pb-24 text-center">
+    <span class="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 rounded-full text-xs font-semibold tracking-wide uppercase mb-6">
+      Educación técnica con IA
+    </span>
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+      Aplicaciones para
+      <span class="gradient-text">maestros y técnicos</span>
+    </h1>
+    <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10">
+      Herramientas hechas por un instructor, para instructores. Planificación de sesiones,
+      simuladores de procesos industriales y más — todo pensado para enseñar mejor.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#apps" class="px-8 py-3.5 bg-brand-600 text-white rounded-lg font-semibold hover:bg-brand-700 transition shadow-md hover:shadow-lg">
+        Ver aplicaciones
+      </a>
+      <a href="#donaciones" class="px-8 py-3.5 bg-white text-brand-700 border-2 border-brand-200 rounded-lg font-semibold hover:border-brand-400 transition">
+        Apoyar el proyecto
+      </a>
+    </div>
+  </section>
+
+  <!-- ───────────── APPS ───────────── -->
+  <section id="apps" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-bold text-slate-900 mb-3">Aplicaciones disponibles</h2>
+        <p class="text-lg text-slate-600">Cada app resuelve un problema concreto del aula técnica.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- App: Planificación de Sesiones -->
+        <a href="https://app.amautai.com" class="group block p-6 bg-gradient-to-br from-brand-50 to-purple-50 rounded-2xl border border-brand-100 hover:border-brand-300 transition hover:shadow-lg">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Planificación de Sesiones</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Genera sesiones de aprendizaje alineadas al CNEB con asistencia de IA.
+            Plantillas, banco de actividades, exportación a Word.
+          </p>
+          <span class="text-sm font-semibold text-brand-700 group-hover:text-brand-900">
+            app.amautai.com →
+          </span>
+        </a>
+
+        <!-- App: Simulador de Presión -->
+        <a href="#" class="group block p-6 bg-gradient-to-br from-sky-50 to-cyan-50 rounded-2xl border border-sky-100 hover:border-sky-300 transition hover:shadow-lg">
+          <div class="w-12 h-12 bg-sky-600 text-white rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Simulador de Presión</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Calibración de instrumentos de presión multi-idioma.
+            Práctica virtual para taller de instrumentación industrial.
+          </p>
+          <span class="text-sm font-semibold text-sky-700">
+            Próximamente →
+          </span>
+        </a>
+
+        <!-- App: Simulador de Temperatura -->
+        <a href="#" class="group block p-6 bg-gradient-to-br from-rose-50 to-orange-50 rounded-2xl border border-rose-100 hover:border-rose-300 transition hover:shadow-lg">
+          <div class="w-12 h-12 bg-rose-600 text-white rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Simulador de Temperatura</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Visualización y cálculo de procesos térmicos.
+            Ideal para electrónica industrial y mecatrónica.
+          </p>
+          <span class="text-sm font-semibold text-rose-700">
+            Próximamente →
+          </span>
+        </a>
+
+        <!-- Card: Más aplicaciones próximamente -->
+        <div class="md:col-span-2 lg:col-span-3 p-8 bg-slate-50 border-2 border-dashed border-slate-200 rounded-2xl text-center">
+          <p class="text-slate-600">
+            <span class="font-semibold text-slate-900">Más aplicaciones en desarrollo:</span>
+            simuladores PLC, calibración de sensores, generadores de exámenes técnicos…
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── SOBRE MÍ ───────────── -->
+  <section id="sobre-mi" class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-10 items-center">
+        <div class="md:col-span-1">
+          <div class="w-48 h-48 mx-auto rounded-2xl bg-gradient-to-br from-brand-500 to-brand-800 flex items-center justify-center text-white text-6xl font-bold shadow-xl">
+            JO
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold text-slate-900 mb-3">Sobre el desarrollador</h2>
+          <p class="text-lg text-slate-700 mb-4">
+            <strong>Jonny Otero</strong> — instructor en SENATI Perú especializado en
+            <em>Instrumentación Industrial, Electrónica y Mecatrónica</em>.
+          </p>
+          <p class="text-slate-600 mb-4">
+            Más de una década enseñando a futuros técnicos. Construyo software que une
+            la práctica del aula con herramientas modernas: IA generativa, simuladores
+            interactivos y automatización pedagógica. Cada app que ves en este portal
+            nació de un problema real al frente de un grupo.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Python · Flask</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">PostgreSQL</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">IA / LLMs</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Instrumentación</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Mecatrónica</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Pedagogía CNEB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── DONACIONES ───────────── -->
+  <section id="donaciones" class="py-20 bg-gradient-to-br from-brand-50 via-white to-purple-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-slate-900 mb-3">Apoyar el proyecto</h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+          El hosting y las mejoras tienen costo. Si alguna de estas apps te ayudó,
+          considera apoyar para mantenerlas vivas y mejorarlas.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+
+        <!-- Yape (destacado, Perú) -->
+        <div class="bg-white p-8 rounded-2xl border-2 border-purple-200 shadow-lg">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-purple-600 text-white rounded-xl flex items-center justify-center font-bold text-lg">
+              Y
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900">Yape</h3>
+              <p class="text-sm text-slate-500">Donaciones desde Perú</p>
+            </div>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-4 flex justify-center mb-4">
+            <img src="/assets/qr_yape.jpeg" alt="QR Yape" class="w-48 h-48 object-contain" />
+          </div>
+          <div class="text-center space-y-1">
+            <p class="text-sm text-slate-500">Titular</p>
+            <p class="font-semibold text-slate-900">Jonny Otero</p>
+            <!-- TODO: confirma tu número y reemplaza -->
+            <p class="text-sm text-slate-500 mt-2">Número Yape</p>
+            <p class="font-mono font-semibold text-slate-900">997 348 442</p>
+          </div>
+        </div>
+
+        <!-- Otros métodos -->
+        <div class="space-y-4">
+
+          <!-- Plin -->
+          <a href="#" class="block p-5 bg-white rounded-xl border border-slate-200 hover:border-cyan-400 hover:shadow-md transition">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-cyan-500 text-white rounded-lg flex items-center justify-center font-bold">P</div>
+                <div>
+                  <p class="font-semibold text-slate-900">Plin</p>
+                  <p class="text-xs text-slate-500">BCP / Interbank / Scotiabank / BBVA</p>
+                </div>
+              </div>
+              <!-- TODO: reemplaza con tu número Plin -->
+              <span class="font-mono text-sm text-slate-700">997 348 442</span>
+            </div>
+          </a>
+
+          <!-- Ko-fi -->
+          <a href="https://ko-fi.com/automaxtecx" target="_blank" rel="noopener" class="block p-5 bg-white rounded-xl border border-slate-200 hover:border-pink-400 hover:shadow-md transition">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-pink-500 text-white rounded-lg flex items-center justify-center font-bold">☕</div>
+                <div>
+                  <p class="font-semibold text-slate-900">Ko-fi</p>
+                  <p class="text-xs text-slate-500">Donación internacional con tarjeta</p>
+                </div>
+              </div>
+              <span class="text-sm text-pink-600 font-semibold">Abrir →</span>
+            </div>
+          </a>
+
+          <!-- Buy Me a Coffee -->
+          <a href="https://buymeacoffee.com/automaxtecx" target="_blank" rel="noopener" class="block p-5 bg-white rounded-xl border border-slate-200 hover:border-yellow-400 hover:shadow-md transition">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-yellow-400 text-slate-900 rounded-lg flex items-center justify-center font-bold">B</div>
+                <div>
+                  <p class="font-semibold text-slate-900">Buy Me a Coffee</p>
+                  <p class="text-xs text-slate-500">Stripe / PayPal / Apple Pay</p>
+                </div>
+              </div>
+              <span class="text-sm text-yellow-700 font-semibold">Abrir →</span>
+            </div>
+          </a>
+
+          <!-- PayPal -->
+          <a href="https://paypal.me/automaxtecx" target="_blank" rel="noopener" class="block p-5 bg-white rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-md transition">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold">P</div>
+                <div>
+                  <p class="font-semibold text-slate-900">PayPal</p>
+                  <p class="text-xs text-slate-500">Internacional</p>
+                </div>
+              </div>
+              <span class="text-sm text-blue-600 font-semibold">Abrir →</span>
+            </div>
+          </a>
+
+          <!-- Mercado Pago -->
+          <a href="#" class="block p-5 bg-white rounded-xl border border-slate-200 hover:border-sky-400 hover:shadow-md transition">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-sky-500 text-white rounded-lg flex items-center justify-center font-bold">MP</div>
+                <div>
+                  <p class="font-semibold text-slate-900">Mercado Pago</p>
+                  <p class="text-xs text-slate-500">LATAM — tarjetas y transferencias</p>
+                </div>
+              </div>
+              <!-- TODO: agrega tu link de Mercado Pago -->
+              <span class="text-sm text-sky-600 font-semibold">Próximamente</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+
+      <p class="text-center text-sm text-slate-500 mt-10">
+        Gracias por mantener estas herramientas accesibles para más docentes y estudiantes. 💜
+      </p>
+    </div>
+  </section>
+
+  <!-- ───────────── CONTACTO / FOOTER ───────────── -->
+  <footer id="contacto" class="bg-slate-900 text-slate-300 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8 mb-10">
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <img src="/assets/logo-amautai.png" alt="AmautAI" class="h-9 w-9 brightness-200" />
+            <span class="font-bold text-xl text-white">AmautAI</span>
+          </div>
+          <p class="text-sm">
+            Apps para la enseñanza técnica y pedagógica. Hechas por un instructor en activo.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-3">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#apps" class="hover:text-white transition">Aplicaciones</a></li>
+            <li><a href="#sobre-mi" class="hover:text-white transition">Sobre mí</a></li>
+            <li><a href="#donaciones" class="hover:text-white transition">Apoyar</a></li>
+            <li><a href="https://app.amautai.com" class="hover:text-white transition">Ir a la app</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-3">Contacto</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="mailto:automax.tecx@gmail.com" class="hover:text-white transition">
+                automax.tecx@gmail.com
+              </a>
+            </li>
+            <!-- TODO: agrega tus redes -->
+            <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
+            <li><a href="#" class="hover:text-white transition">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+        <p>© 2026 AmautAI — Jonny Otero. Todos los derechos reservados.</p>
+        <p>Hecho con ❤ en Perú · <span class="font-mono">amautai.com</span></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

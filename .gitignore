@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Tooling
+.claude/
+.cursor/
+.aider*
+
+# Build / dev (por si en el futuro agregamos build step)
+node_modules/
+dist/
+.cache/
+.parcel-cache/
+
+# Logs
+*.log
