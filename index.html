@@ -17,6 +17,107 @@
 
   <link rel="icon" type="image/png" href="/assets/logo-amautai.png" />
   <link rel="apple-touch-icon" href="/assets/logo-amautai.png" />
+  <link rel="canonical" href="https://amautai.com/" />
+
+  <!-- JSON-LD: Person + WebSite + ItemList de apps. Mejora ricos snippets en Google. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://amautai.com/#jonny",
+        "name": "Jonny Cristhian Otero Baca",
+        "alternateName": "Jonny Otero",
+        "jobTitle": "Instructor de Instrumentación Industrial · Nivel III SENATI",
+        "url": "https://amautai.com",
+        "email": "jcoterobaca@gmail.com",
+        "image": "https://amautai.com/assets/logo-amautai.png",
+        "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "SENATI Piura",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Piura",
+            "addressCountry": "PE"
+          }
+        },
+        "alumniOf": [
+          {"@type": "CollegeOrUniversity", "name": "Universidad Nacional del Callao"},
+          {"@type": "CollegeOrUniversity", "name": "Universidad Nacional de Piura"}
+        ],
+        "knowsAbout": [
+          "PLC Siemens S7", "Allen-Bradley / Rockwell", "SCADA", "Instrumentación Industrial",
+          "HART", "PROFIBUS", "Mecatrónica", "Energía Solar Fotovoltaica",
+          "Python", "ESP32", "EPLAN Electric P8", "Pedagogía técnica"
+        ],
+        "sameAs": [
+          "https://github.com/automaxtecx-png",
+          "https://voltiosybytes.blogspot.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://amautai.com/#website",
+        "url": "https://amautai.com",
+        "name": "AmautAI",
+        "description": "Portal de aplicaciones pedagógicas y técnicas para maestros y formadores en STEM.",
+        "publisher": {"@id": "https://amautai.com/#jonny"},
+        "inLanguage": "es-PE"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Aplicaciones de AmautAI",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "WebApplication",
+              "name": "Planes de Sesión CNEB",
+              "url": "https://cneb.amautai.com",
+              "applicationCategory": "EducationalApplication",
+              "operatingSystem": "Web"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "WebApplication",
+              "name": "Planes de Sesión SENATI",
+              "url": "https://senati.amautai.com",
+              "applicationCategory": "EducationalApplication",
+              "operatingSystem": "Web"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "WebApplication",
+              "name": "Calibración de Presión",
+              "url": "https://simulador-presion.amautai.com",
+              "applicationCategory": "EducationalApplication",
+              "operatingSystem": "Web"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "WebApplication",
+              "name": "Simulador de Temperatura",
+              "url": "https://simulador-temperatura.amautai.com",
+              "applicationCategory": "EducationalApplication",
+              "operatingSystem": "Web"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
