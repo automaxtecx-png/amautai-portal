@@ -121,10 +121,11 @@
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- Fonts: async load (Google Fonts CSS bloqueaba 1.9s) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 
   <!-- Tailwind precompilado (build con `npm run build`). 23 KB minificado vs ~80 KB del CDN.
        Si modificas markup nuevo con clases que no existían, regenera con `npm run build` antes de commitear. -->
