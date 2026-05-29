@@ -193,16 +193,21 @@
       Aplicaciones para
       <span class="gradient-text">maestros y técnicos</span>
     </h1>
-    <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10">
+    <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-4">
       Herramientas hechas por un instructor, para instructores. Planificación de sesiones,
       simuladores de procesos industriales y más — todo pensado para enseñar mejor.
     </p>
+    <p class="inline-flex items-center gap-2 text-sm text-slate-500 bg-slate-100 rounded-full px-4 py-1.5 mb-8">
+      <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      Acceso a las apps <strong class="text-slate-700">por invitación</strong> — pide la tuya gratis abajo
+    </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#apps" class="px-8 py-3.5 bg-brand-600 text-white rounded-lg font-semibold hover:bg-brand-700 transition shadow-md hover:shadow-lg">
-        Ver aplicaciones
+      <a href="#acceso" class="px-8 py-3.5 bg-brand-600 text-white rounded-lg font-semibold hover:bg-brand-700 transition shadow-md hover:shadow-lg inline-flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+        Solicitar acceso gratis
       </a>
-      <a href="#donaciones" class="px-8 py-3.5 bg-white text-brand-700 border-2 border-brand-200 rounded-lg font-semibold hover:border-brand-400 transition">
-        Apoyar el proyecto
+      <a href="#apps" class="px-8 py-3.5 bg-white text-brand-700 border-2 border-brand-200 rounded-lg font-semibold hover:border-brand-400 transition">
+        Ver aplicaciones
       </a>
     </div>
   </section>
@@ -382,99 +387,158 @@
         <span class="inline-block px-3 py-1 bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
           ¿Quieres usar las apps?
         </span>
-        <h2 class="text-4xl font-bold text-slate-900 mb-3">Solicitar acceso</h2>
+        <h2 class="text-4xl font-bold text-slate-900 mb-3">Solicita tu acceso gratis</h2>
         <p class="text-lg text-slate-600">
           Las apps son por invitación para mantener calidad y costos sostenibles.
-          Llena el form, te respondo personalmente en 1-2 días con tu cuenta lista.
+          Te respondo personalmente en 1-2 días con tu cuenta lista.
         </p>
       </div>
 
-      <form action="mailto:jcoterobaca@gmail.com"
-            method="POST"
-            enctype="text/plain"
-            class="bg-slate-50 rounded-2xl p-8 space-y-5 border border-slate-200">
+      {# Tabs: Form vs WhatsApp #}
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
 
-        <div class="grid md:grid-cols-2 gap-5">
-          <div>
-            <label for="nombre" class="block text-sm font-semibold text-slate-700 mb-1.5">
-              Nombre completo *
-            </label>
-            <input type="text" id="nombre" name="Nombre" required
-                   placeholder="Ej. María García López"
-                   class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
-          </div>
-
-          <div>
-            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">
-              Email (el que usarás para login con Google) *
-            </label>
-            <input type="email" id="email" name="Email" required
-                   placeholder="tu@correo.com"
-                   class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
-          </div>
-
-          <div>
-            <label for="institucion" class="block text-sm font-semibold text-slate-700 mb-1.5">
-              Institución *
-            </label>
-            <input type="text" id="institucion" name="Institucion" required
-                   placeholder="Ej. SENATI Piura · I.E. José Olaya"
-                   class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
-          </div>
-
-          <div>
-            <label for="cargo" class="block text-sm font-semibold text-slate-700 mb-1.5">
-              Cargo / Rol *
-            </label>
-            <select id="cargo" name="Cargo" required
-                    class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white">
-              <option value="">Selecciona...</option>
-              <option>Instructor SENATI</option>
-              <option>Docente CNEB (educación básica regular)</option>
-              <option>Coordinador académico</option>
-              <option>Director / Subdirector</option>
-              <option>Estudiante técnico</option>
-              <option>Otro</option>
-            </select>
-          </div>
-        </div>
-
-        <div>
-          <label for="app" class="block text-sm font-semibold text-slate-700 mb-1.5">
-            ¿Qué app te interesa? *
-          </label>
-          <select id="app" name="App" required
-                  class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white">
-            <option value="">Selecciona...</option>
-            <option>Planes de Sesión CNEB</option>
-            <option>Planes de Sesión SENATI</option>
-            <option>Simulador de Calibración de Presión</option>
-            <option>Simulador de Temperatura</option>
-            <option>Varias / todas</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="mensaje" class="block text-sm font-semibold text-slate-700 mb-1.5">
-            Mensaje (opcional)
-          </label>
-          <textarea id="mensaje" name="Mensaje" rows="4"
-                    placeholder="Cómo encontraste AmautAI, qué problema esperas resolver, etc."
-                    class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition"></textarea>
-        </div>
-
-        <div class="pt-2">
-          <button type="submit"
-                  class="w-full px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-semibold transition shadow-md">
-            Enviar solicitud
+        {# Tab headers #}
+        <div class="grid grid-cols-2 border-b border-slate-200 bg-white">
+          <button type="button" id="tab-form-btn"
+                  onclick="document.getElementById('tab-form').classList.remove('hidden'); document.getElementById('tab-wa').classList.add('hidden'); this.classList.add('bg-brand-50','text-brand-700','border-b-2','border-brand-600'); document.getElementById('tab-wa-btn').classList.remove('bg-brand-50','text-brand-700','border-b-2','border-brand-600');"
+                  class="px-6 py-4 font-semibold text-sm transition bg-brand-50 text-brand-700 border-b-2 border-brand-600">
+            📝 Llenar formulario
           </button>
-          <p class="text-xs text-slate-500 text-center mt-3">
-            Tu cliente de email se abrirá para enviar el mensaje a
-            <a href="mailto:jcoterobaca@gmail.com" class="text-brand-700 hover:underline">jcoterobaca@gmail.com</a>.
-            Te respondo en 1-2 días con tu cuenta lista.
+          <button type="button" id="tab-wa-btn"
+                  onclick="document.getElementById('tab-wa').classList.remove('hidden'); document.getElementById('tab-form').classList.add('hidden'); this.classList.add('bg-brand-50','text-brand-700','border-b-2','border-brand-600'); document.getElementById('tab-form-btn').classList.remove('bg-brand-50','text-brand-700','border-b-2','border-brand-600');"
+                  class="px-6 py-4 font-semibold text-sm transition text-slate-600 hover:text-slate-900">
+            💬 Mejor por WhatsApp
+          </button>
+        </div>
+
+        {# Tab content: Form #}
+        <div id="tab-form" class="p-8">
+          <!--
+            Form vía Web3Forms (https://web3forms.com — sin registro de cuenta,
+            solo email para generar access_key). Reemplazar YOUR_ACCESS_KEY_HERE
+            con la key real (Jonny: dirígete a web3forms.com, escribe jcoterobaca@gmail.com,
+            recibirás el access_key por email).
+          -->
+          <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="🎓 Solicitud de acceso a AmautAI" />
+            <input type="hidden" name="from_name" value="amautai.com — Solicitud de acceso" />
+            <input type="hidden" name="redirect" value="https://amautai.com/gracias-solicitud" />
+            {# Honeypot anti-spam: si un bot lo llena, Web3Forms rechaza #}
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div class="grid md:grid-cols-2 gap-5">
+              <div>
+                <label for="nombre" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                  Nombre completo *
+                </label>
+                <input type="text" id="nombre" name="nombre" required
+                       placeholder="Ej. María García López"
+                       class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                  Email *
+                </label>
+                <input type="email" id="email" name="email" required
+                       placeholder="tu@correo.com"
+                       class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
+                <p class="text-xs text-slate-500 mt-1">El mismo que usarás para login con Google</p>
+              </div>
+
+              <div>
+                <label for="institucion" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                  Institución *
+                </label>
+                <input type="text" id="institucion" name="institucion" required
+                       placeholder="Ej. SENATI Piura · I.E. José Olaya"
+                       class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
+              </div>
+
+              <div>
+                <label for="cargo" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                  Cargo / Rol *
+                </label>
+                <select id="cargo" name="cargo" required
+                        class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white">
+                  <option value="">Selecciona...</option>
+                  <option>Instructor SENATI</option>
+                  <option>Docente CNEB (educación básica regular)</option>
+                  <option>Coordinador académico</option>
+                  <option>Director / Subdirector</option>
+                  <option>Estudiante técnico</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="app" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                ¿Qué app te interesa? *
+              </label>
+              <select id="app" name="app" required
+                      class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white">
+                <option value="">Selecciona...</option>
+                <option>Planes de Sesión CNEB</option>
+                <option>Planes de Sesión SENATI</option>
+                <option>Simulador de Calibración de Presión</option>
+                <option>Simulador de Temperatura</option>
+                <option>Varias / todas</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="mensaje" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                Mensaje <span class="text-slate-400 font-normal">(opcional)</span>
+              </label>
+              <textarea id="mensaje" name="mensaje" rows="3"
+                        placeholder="Cómo encontraste AmautAI, qué problema esperas resolver, etc."
+                        class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit"
+                      class="w-full px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-semibold transition shadow-md inline-flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Enviar solicitud
+              </button>
+              <p class="text-xs text-slate-500 text-center mt-3">
+                Respuesta personal en 1-2 días con tu cuenta lista.
+                Si urgente, usa la pestaña <strong>WhatsApp</strong> de arriba.
+              </p>
+            </div>
+          </form>
+        </div>
+
+        {# Tab content: WhatsApp #}
+        <div id="tab-wa" class="hidden p-8 text-center">
+          <div class="w-20 h-20 mx-auto mb-5 rounded-2xl bg-green-500 flex items-center justify-center shadow-lg">
+            <svg class="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Escríbeme por WhatsApp</h3>
+          <p class="text-slate-600 mb-6">
+            Más rápido y directo. Te respondo personalmente desde mi celular.
+          </p>
+
+          <a href="https://wa.me/51948908506?text=Hola%20Jonny%2C%20quiero%20solicitar%20acceso%20a%20AmautAI.%20Soy%20___%20de%20___%20y%20me%20interesa%20la%20app%20de%20___"
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg font-bold text-lg transition shadow-md">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+            </svg>
+            Abrir WhatsApp
+          </a>
+
+          <p class="text-sm text-slate-500 mt-4">
+            +51 948 908 506 · Jonny Otero
           </p>
         </div>
-      </form>
+
+      </div>
     </div>
   </section>
 
