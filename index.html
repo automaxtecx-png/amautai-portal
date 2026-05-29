@@ -126,39 +126,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind via CDN (production-ready, no build step) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          colors: {
-            brand: {
-              50:  '#f5f3ff',
-              100: '#ede9fe',
-              500: '#8b5cf6',
-              600: '#7c3aed',
-              700: '#6d28d9',
-              800: '#5b21b6',
-              900: '#4c1d95',
-            },
-          },
-        },
-      },
-    };
-  </script>
-
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .gradient-text {
-      background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-  </style>
+  <!-- Tailwind precompilado (build con `npm run build`). 23 KB minificado vs ~80 KB del CDN.
+       Si modificas markup nuevo con clases que no existían, regenera con `npm run build` antes de commitear. -->
+  <link rel="stylesheet" href="/css/tailwind.css" />
 </head>
 
 <body class="bg-slate-50 text-slate-800 antialiased">
