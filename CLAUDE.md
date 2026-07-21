@@ -20,6 +20,7 @@ amautai-portal/
 ├── gracias.html        # Post-donación (acceso via /gracias)
 ├── sitemap.xml + robots.txt
 ├── _headers            # Cloudflare security/cache headers
+├── _redirects          # amautai.com/demo -> app.amautai.com/auth/demo (302)
 ├── wrangler.jsonc      # Config del Worker
 └── assets/
     ├── logo-amautai.png   # Logo personaje con chullo
