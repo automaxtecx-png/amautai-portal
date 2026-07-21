@@ -1,0 +1,7 @@
+# Redirecciones del portal (Cloudflare Static Assets, mismo mecanismo que _headers).
+# Formato: <origen>  <destino>  <codigo>
+#
+# 302 (temporal) a proposito: si algun dia el demo cambia de ruta, no queda
+# cacheado permanentemente en navegadores como lo haria un 301.
+
+/demo   https://app.amautai.com/auth/demo   302
