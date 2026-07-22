@@ -369,10 +369,10 @@
         </p>
       </div>
 
-      {# Tabs: Form vs WhatsApp #}
+      <!-- Tabs: Form vs WhatsApp -->
       <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
 
-        {# Tab headers #}
+        <!-- Tab headers -->
         <div class="grid grid-cols-2 border-b border-slate-200 bg-white">
           <button type="button" id="tab-form-btn"
                   onclick="document.getElementById('tab-form').classList.remove('hidden'); document.getElementById('tab-wa').classList.add('hidden'); this.classList.add('bg-brand-50','text-brand-700','border-b-2','border-brand-600'); document.getElementById('tab-wa-btn').classList.remove('bg-brand-50','text-brand-700','border-b-2','border-brand-600');"
@@ -386,7 +386,7 @@
           </button>
         </div>
 
-        {# Tab content: Form #}
+        <!-- Tab content: Form -->
         <div id="tab-form" class="p-8">
           <!--
             Form vía Web3Forms (https://web3forms.com — sin registro de cuenta,
@@ -400,7 +400,7 @@
             <input type="hidden" name="subject" value="🎓 Solicitud de acceso a AmautAI" />
             <input type="hidden" name="from_name" value="amautai.com — Solicitud de acceso" />
             <input type="hidden" name="redirect" value="https://amautai.com/gracias-solicitud" />
-            {# Honeypot anti-spam: si un bot lo llena, Web3Forms rechaza #}
+            <!-- Honeypot anti-spam: si un bot lo llena, Web3Forms rechaza -->
             <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
 
             <div class="grid md:grid-cols-2 gap-5">
@@ -487,7 +487,7 @@
           </form>
         </div>
 
-        {# Tab content: WhatsApp #}
+        <!-- Tab content: WhatsApp -->
         <div id="tab-wa" class="hidden p-8 text-center">
           <div class="w-20 h-20 mx-auto mb-5 rounded-2xl bg-green-500 flex items-center justify-center shadow-lg">
             <svg class="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor">
